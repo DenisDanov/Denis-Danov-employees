@@ -131,7 +131,6 @@ const FileUpload: React.FC = () => {
         </Grid>
     );
 
-    // Determine columns based on the data available in newRows
     const columns: GridColDef[] = [
         {
             field: 'projectId',
@@ -139,8 +138,8 @@ const FileUpload: React.FC = () => {
             flex: 1,
             headerAlign: 'center',
             align: 'center',
-            headerClassName: 'header-cell', // Apply header cell style from CSS
-            cellClassName: 'custom-cell', // Apply cell style from CSS
+            headerClassName: 'header-cell',
+            cellClassName: 'custom-cell',
         },
         {
             field: 'daysWorked',
@@ -148,8 +147,8 @@ const FileUpload: React.FC = () => {
             flex: 1,
             headerAlign: 'center',
             align: 'center',
-            headerClassName: 'header-cell', // Apply header cell style from CSS
-            cellClassName: 'custom-cell', // Apply cell style from CSS
+            headerClassName: 'header-cell',
+            cellClassName: 'custom-cell',
         },
     ];
 
