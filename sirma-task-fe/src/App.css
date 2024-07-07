@@ -1,0 +1,17 @@
+/* Add this to your global CSS file (e.g., index.css or App.css) */
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-height: 616px) {
+    html, body, #root {
+        height: auto;
+        width: auto;
+        display: block;
+    }
+}
