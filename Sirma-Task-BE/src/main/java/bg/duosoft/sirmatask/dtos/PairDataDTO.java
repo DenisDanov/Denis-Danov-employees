@@ -9,5 +9,5 @@ import java.util.Map;
 @AllArgsConstructor
 public class PairDataDTO {
     long totalOverlap;
-    Map<Long,Integer> projectsData;
+    Map<Long,Long> projectsData;
 }

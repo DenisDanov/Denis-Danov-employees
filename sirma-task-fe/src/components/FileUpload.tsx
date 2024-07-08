@@ -41,7 +41,6 @@ const FileUpload: React.FC = () => {
             const newRows: RowData[] = [];
 
             // Iterate over projectsData to extract project ids and days worked
-            let count = 0;
             for (const projectId in data.pairDataDTO.projectsData) {
                 if (data.pairDataDTO.projectsData.hasOwnProperty(projectId)) {
                     const daysWorked = data.pairDataDTO.projectsData[projectId];
@@ -50,7 +49,6 @@ const FileUpload: React.FC = () => {
                         projectId: +projectId, // Convert projectId to number
                         daysWorked: daysWorked,
                     });
-                    count++;
                 }
             }
 

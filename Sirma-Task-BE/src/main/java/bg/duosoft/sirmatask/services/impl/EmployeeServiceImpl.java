@@ -26,7 +26,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 for (int j = i + 1; j < projectEmployees.size(); j++) {
                     EmployeeDTO e1 = projectEmployees.get(i);
                     EmployeeDTO e2 = projectEmployees.get(j);
-                    int overlapDays = (int) calculateOverlapDays(e1, e2);
+                    long overlapDays = calculateOverlapDays(e1, e2);
                     if (overlapDays > 0) {
                         String pairKey = e1.getEmpID() < e2.getEmpID()
                                 ? e1.getEmpID() + "," + e2.getEmpID()
@@ -42,7 +42,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         String[] empIds = new String[2];
         long maxDuration = 0;
-        Map<Long,Integer> projectsData = new HashMap<>();
+        Map<Long,Long> projectsData = new HashMap<>();
         for (Map.Entry<String, PairDataDTO> entry : pairDataMap.entrySet()) {
             if (entry.getValue().getTotalOverlap() > maxDuration) {
                 maxDuration = entry.getValue().getTotalOverlap();
